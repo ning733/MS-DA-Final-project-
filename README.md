@@ -10,12 +10,12 @@ This project follows a systematic pipeline comprising data exploration, dimensio
 
 ## Dataset 2
 - **Name**: Mortgage Payback
-- **Source**: [International Financial Research] https://www.internationalfinancialresearch.org)
+- **Source**: [International Financial Research](https://www.internationalfinancialresearch.org)
 - **Description**: The mortgage dataset reports origination and performance observations for 50,000 U.S. residential mortgage borrowers over 60 periods. It is a randomized selection of mortgage-loan-level data collected from the portfolios underlying U.S. residential mortgage-backed securities (RMBS) securitization portfolios, provided by International Financial Research.
 
 **Note**: The Dataset 2 source link has become outdated. It may be useful for historical context, but newer versions of the dataset may be available from alternative sources or through direct contact with the data provider.
 
-## Dataset 2
+## Dataset 3
 - **Name**: Human Resource Dataset
 - **Source**: [Kaggle - Human Resource Analytics](https://www.kaggle.com/datasets/colara/human-resource)
 - **Description**: The human resource dataset includes data about employees' details and their attrition status in a company. It contains features like employee satisfaction, job involvement, work-life balance, and more. The dataset is used for predicting employee attrition and analyzing the factors contributing to it.
@@ -25,7 +25,11 @@ The project is organized into the following folders:
 - `data/` → Contains raw datasets in a zipped folder.
 - `scripts/` → Contains R scripts for data cleaning, exploration, and modeling.
 - `notebooks/` → Empty.
-- `reports/` → Contains generated reports, visualizations, and insights.
+- `reports/` → Contains a Word document with a detailed summary of the analysis, including:
+  - Abstract of the datasets
+  - Interpretation of key attributes
+  - Steps of the code with accompanying graphs
+  - Models developed and evaluation results
 
 ## Methodology
 1. **Data Processing & Exploration**: 
@@ -45,6 +49,20 @@ The project is organized into the following folders:
 
 ## How to Run
 To replicate the analysis on your local machine:
-1. Install the necessary R packages:
+1. Install Prerequisites
+   Ensure you have the following installed:
+   - R (Version 4.0 or later)
+   - RStudio (Recommended)
+   
+2. Clone the Repository
    ```R
-   install.packages(c("caret", "ggplot2", "tidyr", "randomForest", "e1071"))
+   git clone https://github.com/yourusername/MS-Data-Analytics-Final-Project.git
+   cd MS-Data-Analytics-Final-Project
+3. Install the necessary R packages:
+   ```R
+   required_packages <- c("caret", "ggplot2", "tidyr", "randomForest", "e1071")
+   install.packages(setdiff(required_packages, installed.packages()[,"Package"]))
+4. Run the Code <br>
+   Alternatively, open and run the scripts in RStudio step by step for detailed execution.
+6. View the Report <br>
+   The final report summarizing findings, models, and insights is available in the reports/ folder.
